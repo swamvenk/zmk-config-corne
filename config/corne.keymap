@@ -39,15 +39,17 @@
         C_TAB_KEY {
             bindings = <&kp TAB>;
             key-positions = <13 14>;
-            timeout-ms = <200>;
+            timeout-ms = <10>;
             layers = <0>;
+	    slow-release;
         };
 
         C_BKSP_KEY {
             bindings = <&kp BACKSPACE>;
             key-positions = <9 10>;
-            timeout-ms = <200>;
+            timeout-ms = <10>;
             layers = <0>;
+	    slow-release;
         };
     };
 
