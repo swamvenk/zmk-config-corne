@@ -39,17 +39,25 @@
         C_TAB_KEY {
             bindings = <&kp TAB>;
             key-positions = <13 14>;
-            timeout-ms = <10>;
+            timeout-ms = <50>;
             layers = <0>;
-	    slow-release;
+            slow-release;
         };
 
         C_BKSP_KEY {
             bindings = <&kp BACKSPACE>;
             key-positions = <9 10>;
-            timeout-ms = <10>;
+            timeout-ms = <50>;
             layers = <0>;
-	    slow-release;
+            slow-release;
+        };
+
+        C_ESC_KEY {
+            bindings = <&kp ESCAPE>;
+            key-positions = <1 2>;
+            timeout-ms = <50>;
+            slow-release;
+            layers = <0>;
         };
     };
 
@@ -61,15 +69,15 @@
             // |  ESC Q  |    W    |    E   |    R   |  T  |   |  Y  |    U    |    I   |    O    |    P    |
             // |    A    |    S    |    D   |    F   |  G  |   |  H  |    J    |    K   |    L    |    ;    |
             // | LSHFT Z | LCTRL X | LALT C | LGUI V |  B  |   |  N  | RGUI  M | RALT , | RCTRL . | RSHFT / |
-	    // ---------------------------------------------   ----------------------------------------------
+            // ---------------------------------------------   ----------------------------------------------
             //                          | LGUI | LWR | SPC |   | ENT | RSE  | RCTRL |
-	    //                          --------------------   ----------------------
+            //                          --------------------   ----------------------
 
             bindings = <
-&none  &hml ESCAPE Q  &kp W         &kp E        &kp R        &kp T        &kp Y    &kp U        &kp I            &kp O              &kp P            &none
-&none  &kp A          &kp S         &kp D        &kp F        &kp G        &kp H    &kp J        &kp K            &kp L              &kp SEMI         &none
-&none  &hml LSHFT Z   &hml LCTRL X  &hml LALT C  &hml LGUI V  &kp B        &kp N    &hmr RGUI M  &hmr RALT COMMA  &hmr RCTRL PERIOD  &hmr RSHFT FSLH  &none
-                                    &kp LGUI     &mo 1        &kp SPACE    &kp RET  &mo 2        &kp RCTRL
+&none  &kp Q         &kp W         &kp E        &kp R        &kp T        &kp Y      &kp U        &kp I            &kp O              &kp P            &none
+&none  &kp A         &kp S         &kp D        &kp F        &kp G        &kp H      &kp J        &kp K            &kp L              &kp SEMI         &none
+&none  &hml LSHFT Z  &hml LCTRL X  &hml LALT C  &hml LGUI V  &kp B        &kp N      &hmr RGUI M  &hmr RALT COMMA  &hmr RCTRL PERIOD  &hmr RSHFT FSLH  &none
+                                   &kp LGUI     &mo 1        &kp SPACE    &kp ENTER  &mo 2        &kp RCTRL
             >;
         };
 
@@ -78,9 +86,9 @@
             // |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | 
             // |  1  |  2  |  3  |  4  |  5  |   |  -  |  _  |  '  |  [  |  ]  |
             // |  6  |  7  |  8  |  9  |  0  |   |  +  |  =  |  "  |  {  |  }  |
-	    // -------------------------------   -------------------------------
+            // -------------------------------   -------------------------------
             //            | LGUI |     | SPC |   | ENT |     | RCTRL |
-	    //            --------------------   ---------------------
+            //            --------------------   ---------------------
 
             bindings = <
 &none  &kp EXCL      &kp AT        &kp HASH      &kp DLLR      &kp PRCNT       &kp CARET  &kp AMPS   &kp STAR           &kp LPAR          &kp RPAR           &none
@@ -95,14 +103,14 @@
             // |     F1     |     F2     |     F3     |     F4     |     F5     |   |     F6     |     F7     |     F8     |     F9     |     F10     |
             // |  BT_SEL 0  |  BT_SEL 1  |  BT_SEL 2  |  BT_SEL 3  |  BT_SEL 4  |   |    LEFT    |    DOWN    |     UP     |    RIGHT   |      \      |
             // |   LSHFT    |  BT_PREV   |   BT_NEXT  |   BT_CLR   |            |   |    MUTE    |   VOL_DWN  |   VOL_UP   |      `     |     RALT    |
-	    // ------------------------------------------------------------------   -------------------------------------------------------------------
+            // ------------------------------------------------------------------   -------------------------------------------------------------------
             //                                               | LGUI |     | SPC |   | ENT |     | RCTRL |
-	    //                                               --------------------   ---------------------
+            //                                               --------------------   ---------------------
 
             bindings = <
 &none  &kp F1          &kp F2        &kp F3        &kp F4        &kp F5          &kp F6      &kp F7        &kp F8        &kp F9     &kp F10        &none
-&none  &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT    &kp DOWN      &kp UP        &kp RIGHT  &kp BSLH       &none
-&none  &kp LEFT_SHIFT  &bt BT_PRV    &bt BT_NXT    &bt BT_CLR    &trans          &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp GRAVE  &kp RIGHT_ALT  &none
+&none  &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT    &kp DOWN      &kp UP        &kp RIGHT  &kp BACKSPACE  &none
+&none  &kp LEFT_SHIFT  &kp LCTRL     &kp LALT      &kp LGUI      &bt BT_CLR      &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp GRAVE  &kp BACKSLASH  &none
                                      &kp LGUI      &trans        &kp SPACE       &kp ENTER   &trans        &kp RCTRL
             >;
         };
