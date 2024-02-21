@@ -8,4 +8,4 @@ Over the years people have modified the original wired design to build a wireles
 The famous [QMK firmware](https://github.com/qmk/qmk_firmware) is only used for wired keyboards. For wireless ones, we use [ZMK firmware](https://github.com/zmkfirmware/zmk) instead.
 
 ## Keymaps
-![my_keymap](https://github.com/swamvenk/zmk-config-corne/assets/11386944/151e43c2-98ab-459f-b471-a87fbcd1f747)
+![my_keymap](https://github.com/swamvenk/zmk-config-corne/assets/11386944/0d9dfadf-9d6f-43f0-9edf-38a8ab8b3a07)
